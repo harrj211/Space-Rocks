@@ -18,11 +18,25 @@ if (keyboard_check(ord("S")))
 	motion_add(image_angle, -0.01);
 }
 
-if (keyboard_check_pressed(vk_space)) 
+//Shoot
+if(a10mode = 0)
 {
-	var inst = instance_create_layer(x,y, "Instances", obj_bullet);
-	inst.direction = image_angle
-	motion_add(image_angle, -0.01);
+	if (keyboard_check_pressed(vk_space)) 
+	{
+		var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+		inst.direction = image_angle
+		motion_add(image_angle, -0.01);
+	}
+}
+
+if(a10mode = 1)
+{
+	if (keyboard_check(vk_space)) 
+	{
+		var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+		inst.direction = image_angle
+		motion_add(image_angle, -0.01);
+	}
 }
 
 move_wrap(true,true,sprite_width/2);
