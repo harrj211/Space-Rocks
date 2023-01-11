@@ -28,8 +28,7 @@ if(a10mode = 0)
 		motion_add(image_angle, -0.01);
 	}
 }
-
-if(a10mode = 1)
+else
 {
 	if (keyboard_check(vk_space)) 
 	{
