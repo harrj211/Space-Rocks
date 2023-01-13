@@ -28,13 +28,32 @@ if(a10mode = 0)
 		motion_add(image_angle, -0.01);
 	}
 }
-else
+if(a10mode = 1)
 {
 	if (keyboard_check(vk_space)) 
 	{
 		var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 		inst.direction = image_angle
 		motion_add(image_angle, -0.01);
+	}
+}
+
+if(a10mode = 2)
+{
+	if (keyboard_check_pressed(vk_space)) 
+	{
+		repeat (5)
+		{
+			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+			inst.direction = image_angle + irandom_range(0, 10);
+			motion_add(image_angle, -0.03);
+		}
+		repeat (5)
+		{
+			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+			inst.direction = image_angle - irandom_range(0, 10);
+			motion_add(image_angle, -0.03);
+		}
 	}
 }
 
