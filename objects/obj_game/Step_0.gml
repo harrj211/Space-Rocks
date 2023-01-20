@@ -1,5 +1,6 @@
 if(keyboard_check_pressed(vk_enter))
 {
+	audio_play_sound(snd_enter, 1, false);
 	switch(room)
 	{
 		case rm_start:
@@ -17,14 +18,14 @@ if(room == rm_game)
 {
 	if(score >= 1000)
 	{
-		audio_stop_all()
+		audio_stop_sound(snd_song)
 		room_goto(rm_win);
 		audio_play_sound(snd_win, 1, false);
 	}
 
 	if(lives <= 0)
 	{
-		audio_stop_all()
+		audio_stop_sound(snd_song)
 		room_goto(rm_lose);
 		audio_play_sound(snd_lose, 1, false);
 	}
