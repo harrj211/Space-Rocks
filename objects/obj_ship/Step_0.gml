@@ -26,6 +26,7 @@ if(a10mode = 0)
 		var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 		inst.direction = image_angle
 		motion_add(image_angle, -0.01);
+		audio_play_sound(snd_bang, 1, false);
 	}
 }
 if(a10mode = 1)
@@ -35,6 +36,7 @@ if(a10mode = 1)
 		var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 		inst.direction = image_angle
 		motion_add(image_angle, -0.01);
+		audio_play_sound(snd_bang, 1, false);
 	}
 }
 
@@ -47,12 +49,14 @@ if(a10mode = 2)
 			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 			inst.direction = image_angle + irandom_range(0, 10);
 			motion_add(image_angle, -0.03);
+			audio_play_sound(snd_bang, 1, false);
 		}
 		repeat (5)
 		{
 			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 			inst.direction = image_angle - irandom_range(0, 10);
 			motion_add(image_angle, -0.03);
+			audio_play_sound(snd_bang, 1, false);
 		}
 	}
 }
