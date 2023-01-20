@@ -18,7 +18,7 @@ with(other)
 	}
 	else if(sprite_index == spr_asteroid_med)
 	{
-		repeat (2)
+		repeat (3)
 		{
 		var new_asteriod = instance_create_layer(x,y, "Instances", obj_asteroid);
 		new_asteriod.sprite_index = spr_asteroid_smol;
