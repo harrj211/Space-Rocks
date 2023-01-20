@@ -17,11 +17,15 @@ if(room == rm_game)
 {
 	if(score >= 1000)
 	{
+		audio_stop_all()
 		room_goto(rm_win);
+		audio_play_sound(snd_win, 1, false);
 	}
 
 	if(lives <= 0)
 	{
+		audio_stop_all()
 		room_goto(rm_lose);
+		audio_play_sound(snd_lose, 1, false);
 	}
 }
