@@ -20,10 +20,11 @@ switch(room)
 //Start
 	case rm_start:
 		draw_set_halign(fa_center);
-		var c = c_yellow;
+		var c = c_purple;
+		var a = c_gray;
 		draw_text_transformed_color(
-			room_width/2, 100, "SPACE ROCKS",
-			3, 3, 0, c,c,c,c, 1
+			room_width/2, 100, "WAR ROCKS",
+			3, 3, 0, c,c,a,a, 1
 		);
 		
 		draw_text(room_width/2, 200, string(game_instructions));
@@ -34,10 +35,11 @@ switch(room)
 //Win
 	case rm_win:
 		draw_set_halign(fa_center);
-		var c = c_lime;
+		var c = c_fuchsia;
+		var a = c_gray;
 		draw_text_transformed_color(
 			room_width/2, 100, "YOU WON!",
-			3, 3, 0, c,c,c,c, 1
+			3, 3, 0, c,c,a,a, 1
 		);
 		
 		draw_text(room_width/2, 300, string("PRESS ENTER TO RESTART"));
@@ -48,10 +50,11 @@ switch(room)
 //Lose
 	case rm_lose:
 		draw_set_halign(fa_center);
-		var c = c_red;
+		var c = c_blue;
+		var a = c_gray;
 		draw_text_transformed_color(
 			room_width/2, 150, "GAME OVER",
-			3, 3, 0, c,c,c,c, 1
+			3, 3, 0, c,c,a,a, 1
 		);
 		
 		draw_text(room_width/2, 250, string("FINAL SCORE:"+string(score)));
