@@ -23,7 +23,7 @@ switch(room)
 		var c = c_purple;
 		var a = c_gray;
 		draw_text_transformed_color(
-			room_width/2, 100, "WAR ROCKS",
+			room_width/2, 100, "SPACE ROCKS",
 			3, 3, 0, c,c,a,a, 1
 		);
 		
