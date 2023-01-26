@@ -1,4 +1,4 @@
-a10mode = 0;
+global.a10mode = 0;
 global.iframe = 0;
 
 

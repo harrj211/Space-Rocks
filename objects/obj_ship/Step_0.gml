@@ -19,7 +19,7 @@ if (keyboard_check(ord("S")))
 }
 
 //Shoot
-if(a10mode = 0)
+if(global.a10mode = 0)
 {
 	if (keyboard_check_pressed(vk_space)) 
 	{
@@ -29,7 +29,7 @@ if(a10mode = 0)
 		audio_play_sound(snd_bang, 1, false);
 	}
 }
-if(a10mode = 1)
+if(global.a10mode = 1)
 {
 	if (keyboard_check(vk_space)) 
 	{
@@ -40,7 +40,7 @@ if(a10mode = 1)
 	}
 }
 
-if(a10mode = 2)
+if(global.a10mode = 2)
 {
 	if (keyboard_check_pressed(vk_space)) 
 	{
@@ -62,3 +62,53 @@ if(a10mode = 2)
 }
 
 move_wrap(true,true,sprite_width/2);
+
+//skin stuff
+
+//Frame skin
+if(global.skin = 0 and global.a10mode = 0)
+{
+	sprite_index = spr_ship_frame;
+}
+
+if(global.skin = 0 and global.a10mode = 1)
+{
+	sprite_index = spr_ship_frame_1;
+}
+
+if(global.skin = 0 and global.a10mode = 2)
+{
+	sprite_index = spr_ship_frame_2;
+}
+
+//Historical skin
+if(global.skin = 1 and global.a10mode = 0)
+{
+	sprite_index = spr_ship_historical;
+}
+
+if(global.skin = 1 and global.a10mode = 1)
+{
+	sprite_index = spr_ship_historical_1;
+}
+
+if(global.skin = 1 and global.a10mode = 2)
+{
+	sprite_index = spr_ship_historical_2;
+}
+
+//Night skin
+if(global.skin = 2 and global.a10mode = 0)
+{
+	sprite_index = spr_ship_night;
+}
+
+if(global.skin = 2 and global.a10mode = 1)
+{
+	sprite_index = spr_ship_night_1;
+}
+
+if(global.skin = 2 and global.a10mode = 2)
+{
+	sprite_index = spr_ship_night_2;
+}

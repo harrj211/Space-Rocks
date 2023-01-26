@@ -6,6 +6,7 @@ A/D: change direction
 S: slow down
 SPACE: shoot
 Ctrl: switch weapons
+Alt: switch ship skin
 
 >> PRESS ENTER TO START <<
 "
