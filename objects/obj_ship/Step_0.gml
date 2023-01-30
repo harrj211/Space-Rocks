@@ -1,19 +1,19 @@
-if (keyboard_check(ord("A"))) 
+if (keyboard_check(ord("A")) or (keyboard_check(vk_left))) 
 	{
 		image_angle += 5;
 	}
 
-	if (keyboard_check(ord("D"))) 
+	if (keyboard_check(ord("D")) or (keyboard_check(vk_right))) 
 	{
 		image_angle -= 5;
 	}
 
-if (keyboard_check(ord("W"))) 
+if (keyboard_check(ord("W")) or (keyboard_check(vk_up)))  
 {
 	motion_add(image_angle, 0.03);
 }
 
-if (keyboard_check(ord("S")))
+if (keyboard_check(ord("S")) or (keyboard_check(vk_down)))
 {
 	motion_add(image_angle, -0.01);
 }

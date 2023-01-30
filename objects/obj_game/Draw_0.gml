@@ -1,9 +1,9 @@
 var game_instructions =
 @"Score 1000 points to win!
 
-W: move
-A/D: change direction
-S: slow down
+W & Up: move
+A/D & Left/Right: change direction
+S & Down: slow down
 SPACE: shoot
 Ctrl: switch weapons
 Alt: switch ship skin
