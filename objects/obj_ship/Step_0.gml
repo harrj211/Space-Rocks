@@ -70,6 +70,9 @@ if(global.a10mode = 3)
 			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
 			inst.direction = image_angle	
 			audio_play_sound(snd_bang, 1, false);
+		}
+		repeat (10)
+		{
 			motion_add(image_angle, -0.03);
 		}
 	}
