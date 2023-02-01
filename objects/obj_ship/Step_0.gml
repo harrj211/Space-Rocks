@@ -61,6 +61,20 @@ if(global.a10mode = 2)
 	}
 }
 
+if(global.a10mode = 3)
+{
+	if (keyboard_check_pressed(vk_space)) 
+	{
+		repeat (20)
+		{
+			var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+			inst.direction = image_angle	
+			audio_play_sound(snd_bang, 1, false);
+			motion_add(image_angle, -0.03);
+		}
+	}
+}
+
 move_wrap(true,true,sprite_width/2);
 
 //skin stuff
@@ -78,6 +92,11 @@ if(global.skin = 0 and global.a10mode = 1)
 
 if(global.skin = 0 and global.a10mode = 2)
 {
+	sprite_index = spr_ship_frame_3;
+}
+
+if(global.skin = 0 and global.a10mode = 3)
+{
 	sprite_index = spr_ship_frame_2;
 }
 
@@ -94,6 +113,11 @@ if(global.skin = 1 and global.a10mode = 1)
 
 if(global.skin = 1 and global.a10mode = 2)
 {
+	sprite_index = spr_ship_historical_3;
+}
+
+if(global.skin = 1 and global.a10mode = 3)
+{
 	sprite_index = spr_ship_historical_2;
 }
 
@@ -109,6 +133,11 @@ if(global.skin = 2 and global.a10mode = 1)
 }
 
 if(global.skin = 2 and global.a10mode = 2)
+{
+	sprite_index = spr_ship_night_3;
+}
+
+if(global.skin = 2 and global.a10mode = 3)
 {
 	sprite_index = spr_ship_night_2;
 }
